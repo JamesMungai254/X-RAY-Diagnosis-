@@ -8,7 +8,7 @@ import os
 # 🧠 MODEL LOADING (Replace this part with your own)
 # ---------------------------
 def load_model():
-    model_path = "model/tb_model.pth"
+    model_path = "model/best_model.pth"
 
     # 1️⃣ Define the same model architecture used during training
     model = models.resnet18(pretrained=False)
