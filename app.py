@@ -12,7 +12,7 @@ from PIL import Image
 def load_model():
     model_path = "model/best_model.pth"
 
-    # Define model architecture (must match training)
+    # Define model architecture
     model = models.resnet18(pretrained=False)
     num_ftrs = model.fc.in_features
     model.fc = nn.Linear(num_ftrs, 2)  # 2 classes: Normal, Tuberculosis
