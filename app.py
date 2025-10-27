@@ -70,7 +70,7 @@ if page == "🏠 Home":
     ---
     """)
 
-    st.image("images/tb_banner.jpg", use_column_width=True, caption="AI for Healthcare – Tuberculosis Detection")
+    st.image("images/tb_banner.jpg", use_container_width=True, caption="AI for Healthcare – Tuberculosis Detection")
 
     st.markdown("""
     ### 👨‍⚕️ Ethical Note
@@ -96,7 +96,7 @@ elif page == "🔬 Predict TB":
             f.write(uploaded_file.getbuffer())
 
         # Display the uploaded image
-        st.image(image_path, caption="Uploaded Chest X-ray", use_column_width=True)
+        st.image(image_path, caption="Uploaded Chest X-ray", use_container_width=True)
 
         # Predict Button
         if st.button("🧠 Predict TB"):
