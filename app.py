@@ -130,6 +130,7 @@ elif page == "🔬 Predict TB":
 # ---------------------------
 st.markdown("""
 ---
-📘 **Developed by:** *James Mungai*  
-💻 *AI-Powered Diagnostic Tool for Tuberculosis Detection in Kenya*  
+  **Developed by:** *James Mungai*  
+  ** Email:** *jamesmungai6303@gmail.com*
+  *AI-Powered Diagnostic Tool for Tuberculosis Detection *  
 """)
