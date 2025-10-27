@@ -1,8 +1,4 @@
-Here’s a **professional `README.md` file** tailored for your **AI-Powered Tuberculosis Detection Streamlit App** — written in clear, well-structured Markdown that’s perfect for GitHub or project documentation.
 
----
-
-```markdown
 # 🩺 AI-Powered Tuberculosis Detection Using Chest X-Ray Images
 
 > **Empowering early diagnosis of Tuberculosis (TB) through Artificial Intelligence and Computer Vision.**
