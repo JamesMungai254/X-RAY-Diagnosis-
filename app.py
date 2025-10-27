@@ -8,27 +8,32 @@ import os
 # 🧠 MODEL LOADING (Replace this part with your own)
 # ---------------------------
 def load_model():
-    model_path = "model/best_model.pth"
-    model = torch.load(model_path, map_location=torch.device('cpu'))
+    model_path = "model/tb_model.pth"
+
+    # 1️⃣ Define the same model architecture used during training
+    model = models.resnet18(pretrained=False)
+    num_ftrs = model.fc.in_features
+    model.fc = nn.Linear(num_ftrs, 2)  # Assuming binary classification: Normal vs TB
+
+    # 2️⃣ Load trained weights
+    state_dict = torch.load(model_path, map_location=torch.device('cpu'))
+    model.load_state_dict(state_dict)
+
+    # 3️⃣ Set model to evaluation mode
     model.eval()
     return model
 
 def predict(image_path):
     model = load_model()
-
     transform = transforms.Compose([
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
     ])
-
     image = Image.open(image_path).convert('RGB')
     image = transform(image).unsqueeze(0)
-
     with torch.no_grad():
         output = model(image)
         _, predicted = torch.max(output, 1)
-    
-    # Assuming class 1 = Tuberculosis, 0 = Normal
     return 'Tuberculosis' if predicted.item() == 1 else 'Normal'
 
 
