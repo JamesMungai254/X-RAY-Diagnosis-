@@ -70,7 +70,7 @@ if page == "🏠 Home":
     ---
     """)
 
-    st.image("images/tb_banner.jpg", use_container_width=True, caption="AI for Healthcare – Tuberculosis Detection")
+    st.image("images/tb_banner.webp", use_container_width=True, caption="AI for Healthcare – Tuberculosis Detection")
 
     st.markdown("""
     ### 👨‍⚕️ Ethical Note
