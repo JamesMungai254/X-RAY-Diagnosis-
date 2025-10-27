@@ -102,7 +102,7 @@ elif page == "🔬 Predict TB":
     st.title("🔬 Chest X-ray Tuberculosis Prediction")
     st.markdown("Upload a chest X-ray image below to let the AI model predict whether it indicates **Tuberculosis** or **Normal** lungs.")
 
-    uploaded_file = st.file_uploader("Upload Chest X-ray Image", type=["jpg", "jpeg", "png"])
+    uploaded_file = st.file_uploader("Upload Chest X-ray Image", type=["jpg", "jpeg", "png","webp"])
 
     if uploaded_file is not None:
         # Read image directly from memory (no saving)
