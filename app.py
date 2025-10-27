@@ -131,6 +131,6 @@ elif page == "🔬 Predict TB":
 st.markdown("""
 ---
 📘 **Developed by:** *James Mungai*  
-💻 **Email:** *jamesmungai6303@gmail.com*
-💻 *AI-Powered Diagnostic Tool for Tuberculosis Detection *  
+💻 *AI-Powered Diagnostic Tool for Tuberculosis Detection*  
+📧 **Contact:** [jamesmungai6303@gmail.com](mailto:jamesmungai6303@gmail.com)
 """)
